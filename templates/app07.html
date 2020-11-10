@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<title>Hello, Flask!</title>
+	</header>
+	<body>
+		Hello {{name}}!
+		{% for number in numbers %}
+		<h5>{{number}}</h5>
+		{% endfor %}
+
+		{% if flag %}
+		<h4>flag is True</h4>
+		{% endif %}
+
+		{% if flag2 %}
+		<h4>flag2 is True</h4>
+		{% endif %}
+	</body>
+</html>
+
