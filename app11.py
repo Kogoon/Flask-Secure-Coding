@@ -11,8 +11,8 @@ def index():
     if name:
         conn = sqlite3.connect('app11.db')
         cursor = conn.cursor()
-        query = "SELECT * FROM tb_user WHERE name='{}'".format(name)
-        cursor.execute(query)
+        query = "SELECT * FROM tb_user WHERE name=?"
+        cursor.execute(query, (name,))
         rows = cursor.fetchall()
     else:
         name = 'Brown'
