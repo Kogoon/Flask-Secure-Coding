@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Hello, Flask!</title>
+    </header>
+    <body>
+        Hello {{name}}<br>
+        
+        <form action="/" method="GET">
+            <span>Name : <input type="text" name="name"></span><br>
+            <button type="submit">Enter</button>
+        </form>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Home</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
+
